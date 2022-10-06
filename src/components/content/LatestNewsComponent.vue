@@ -26,7 +26,7 @@ export default {
 
 #latestNews {
     .container {
-        padding: 100px 0;
+        padding: $tr-py-100;
     }
 }
 </style>

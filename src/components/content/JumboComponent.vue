@@ -29,7 +29,7 @@ export default {
     background-image: url(@/assets/images/home_slider_bg.jpg);
     background-size: cover;
 
-    padding: 310px;
+    padding: $tr-jumbo-padding;
 
     h1 {
         font-size: 6rem;

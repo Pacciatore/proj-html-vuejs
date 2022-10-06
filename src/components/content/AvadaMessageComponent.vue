@@ -23,7 +23,7 @@ export default {
 .avada-message {
     background-color: $tr-custom-grey;
 
-    padding: 100px 0;
+    padding: $tr-py-100;
 
     h5 {
         color: $tr-cape-cod;
