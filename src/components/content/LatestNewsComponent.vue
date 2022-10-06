@@ -27,6 +27,21 @@ export default {
 #latestNews {
     .container {
         padding: $tr-py-100;
+
+        .title {
+            h3 {
+                color: $tr-cape-cod;
+                font-size: $tr-fs-07;
+                letter-spacing: $tr-title-ls;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-weight: 700;
+            }
+        }
+
     }
 }
 </style>

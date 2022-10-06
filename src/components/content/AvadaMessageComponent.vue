@@ -27,8 +27,8 @@ export default {
 
     h5 {
         color: $tr-cape-cod;
-        font-size: .7rem;
-        letter-spacing: 5px;
+        font-size: $tr-fs-07;
+        letter-spacing: $tr-title-ls;
         margin-bottom: 1rem;
     }
 
