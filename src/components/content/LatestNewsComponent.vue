@@ -33,12 +33,22 @@
             </div>
 
             <!-- One big element -->
-            <div class="one-in-one">
-                <div class="col p-5">
+            <div class="one-in-one my-5">
+                <div class="col">
 
                     <div class="title-container">
                         <h3>Featured Articles</h3>
                         <h2>Cras malesuada et orci eget pharetra</h2>
+                    </div>
+
+                    <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus
+                        venenatis, sed blandit dui, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus.
+                    </p>
+
+                    <div class="btn-container">
+                        <button class="btn btn-dark rounded-0 text-uppercase px-4 py-2 fw-semibold">Read More
+                            <font-awesome-icon class="ps-2" icon="fa-solid fa-angle-right" />
+                        </button>
                     </div>
 
                 </div>
@@ -139,8 +149,10 @@ export default {
             // Unico elemento
             .col {
                 display: flex;
-                flex-direction: column-reverse;
+                flex-direction: column;
+                justify-content: end;
 
+                padding: 100px;
                 margin-right: 10px;
 
                 height: 670px;
@@ -156,6 +168,10 @@ export default {
 
                 h2 {
                     font-size: 3rem;
+                }
+
+                p {
+                    padding: 20px 0;
                 }
 
             }
