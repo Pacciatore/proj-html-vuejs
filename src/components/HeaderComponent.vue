@@ -13,7 +13,13 @@
             <!-- Elenco degli elementi della nav -->
             <ul class="navbar-nav col-7 flex-row justify-content-between">
 
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                    <!-- TODO
+                            Triangolo dinamico con la classe active -->
+                    <div class="triangle-down"></div>
+                </li>
+
                 <li class="nav-item"><a class="nav-link" href="#">Apple</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Microsoft</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Android</a></li>
@@ -43,14 +49,35 @@ export default {
 header {
     background-color: $tr-header-bg;
 
-    .nav-link {
-        color: inherit;
+    .nav-item {
 
-        font-weight: 300;
-    }
+        position: relative;
 
-    button {
-        border-radius: 0;
+        .triangle-down {
+            position: absolute;
+            top: 55px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+
+            border-top: 20px solid $tr-header-bg;
+        }
+
+        .nav-link {
+            color: inherit;
+
+            font-weight: 300;
+
+            &.active {
+                color: inherit;
+            }
+
+        }
+
+        button {
+            border-radius: 0;
+        }
     }
 
 }
