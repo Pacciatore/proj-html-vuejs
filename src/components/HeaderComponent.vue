@@ -47,7 +47,7 @@ export default {
 @import '@/assets/style/variables.scss';
 
 header {
-    background-color: $tr-header-bg;
+    background-color: $tr-brand-color;
 
     .nav-item {
 
@@ -61,7 +61,7 @@ header {
             border-left: 20px solid transparent;
             border-right: 20px solid transparent;
 
-            border-top: 20px solid $tr-header-bg;
+            border-top: 20px solid $tr-brand-color;
         }
 
         .nav-link {
