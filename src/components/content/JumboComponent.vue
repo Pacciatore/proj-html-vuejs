@@ -4,9 +4,9 @@
         <div class="container">
 
             <h1>Tech Forum!</h1>
-            <p>Discuss all the latest technology news and trends</p>
+            <p class="py-3 fw-light">Discuss all the latest technology news and trends</p>
             <div class="btn-container">
-                <button class="btn btn-primary text-uppercase">Get Avada now!
+                <button class="btn btn-primary text-uppercase px-4 fw-semibold">Get Avada now!
                     <font-awesome-icon icon="fa-solid fa-angle-right" />
                 </button>
             </div>
@@ -26,9 +26,15 @@ export default {
 @import '@/assets/style/variables.scss';
 
 .jumbo-container {
-    min-height: 200px;
-
     background-image: url(@/assets/images/home_slider_bg.jpg);
+    background-size: cover;
+
+    padding: 310px;
+
+    h1 {
+        font-size: 6rem;
+        font-weight: 700;
+    }
 
     button {
         border-radius: 0;
