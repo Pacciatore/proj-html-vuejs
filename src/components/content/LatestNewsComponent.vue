@@ -134,6 +134,8 @@ export default {
         // Contenitore elemento unico
         .one-in-one {
 
+            color: white;
+
             // Unico elemento
             .col {
                 display: flex;
@@ -145,6 +147,17 @@ export default {
 
                 background-image: url(@/assets/images/featured_article_1_bg.jpg);
                 background-size: contain;
+
+                h3 {
+                    color: inherit;
+                    text-transform: uppercase;
+                    font-size: .9rem;
+                }
+
+                h2 {
+                    font-size: 3rem;
+                }
+
             }
         }
 
