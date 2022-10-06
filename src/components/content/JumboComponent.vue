@@ -7,7 +7,7 @@
             <p class="py-3 fw-light">Discuss all the latest technology news and trends</p>
             <div class="btn-container">
                 <button class="btn btn-primary text-uppercase px-4 fw-semibold">Get Avada now!
-                    <font-awesome-icon icon="fa-solid fa-angle-right" />
+                    <font-awesome-icon class="ps-2" icon="fa-solid fa-angle-right" />
                 </button>
             </div>
 
@@ -41,6 +41,10 @@ export default {
         border: none;
 
         background-color: $tr-brand-color;
+
+        &:hover {
+            background-color: $tr-brand-color-hover;
+        }
     }
 
 }
