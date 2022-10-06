@@ -3,6 +3,7 @@
 
     <JumboComponent />
     <AvadaMessageComponent />
+    <LatestNewsComponent />
 
   </main>
 </template>
@@ -10,9 +11,10 @@
 <script>
 import JumboComponent from './content/JumboComponent.vue';
 import AvadaMessageComponent from './content/AvadaMessageComponent.vue';
+import LatestNewsComponent from './content/LatestNewsComponent.vue';
 export default {
   name: "MainComponent",
-  components: { JumboComponent, AvadaMessageComponent }
+  components: { JumboComponent, AvadaMessageComponent, LatestNewsComponent }
 }
 </script>
 
