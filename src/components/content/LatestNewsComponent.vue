@@ -15,6 +15,7 @@
 
             </div>
 
+            <!-- First 3 in 1 -->
             <ThreeNewsComponent />
 
             <!-- One big element -->
@@ -39,7 +40,7 @@
                 </div>
             </div>
 
-
+            <!-- Second 3 in 1 -->
             <ThreeNewsComponent />
             <!-- Second 3 in 1
             <div class="three-in-one">

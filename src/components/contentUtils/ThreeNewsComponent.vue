@@ -1,5 +1,5 @@
 <template>
-    <!-- First 3 in 1 -->
+
     <div class="three-in-one">
 
         <div class="col-3">
