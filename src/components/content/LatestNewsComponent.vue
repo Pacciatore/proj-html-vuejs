@@ -16,7 +16,7 @@
             </div>
 
             <!-- First 3 in 1 -->
-            <ThreeNewsComponent />
+            <ThreeNewsComponent :imgNums="[img1, img2, img3]" />
 
             <!-- One big element -->
             <div class="one-in-one my-5">
@@ -41,23 +41,7 @@
             </div>
 
             <!-- Second 3 in 1 -->
-            <ThreeNewsComponent />
-            <!-- Second 3 in 1
-            <div class="three-in-one">
-
-                <div class="col-3">
-                    <img src="@/assets/images/post_feat_img_22-320x202.jpg" alt="img">
-                </div>
-
-                <div class="col-3">
-                    <img src="@/assets/images/post_feat_img_21-320x202.jpg" alt="img">
-                </div>
-
-                <div class="col-3">
-                    <img src="@/assets/images/post_feat_img_20-320x202.jpg" alt="img">
-                </div>
-
-            </div> -->
+            <ThreeNewsComponent :imgNums="[img4, img5, img6]" />
 
             <!-- One 2/3 and 1/3 -->
             <div class="two-and-one gap-5 pt-5">
@@ -85,7 +69,17 @@
 import ThreeNewsComponent from "../contentUtils/ThreeNewsComponent.vue";
 export default {
     name: "LatestNewsComponent",
-    components: { ThreeNewsComponent }
+    components: { ThreeNewsComponent },
+    data() {
+        return {
+            img1: '25',
+            img2: '24',
+            img3: '23',
+            img4: '22',
+            img5: '21',
+            img6: '20',
+        }
+    }
 }
 </script>
 

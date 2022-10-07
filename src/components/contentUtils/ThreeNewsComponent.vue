@@ -3,15 +3,15 @@
     <div class="three-in-one">
 
         <div class="col-3">
-            <img src="@/assets/images/post_feat_img_25-320x202.jpg" alt="img">
+            <img :src="require(`@/assets/images/${images[0]}`)" alt="img">
         </div>
 
         <div class="col-3">
-            <img src="@/assets/images/post_feat_img_24-320x202.jpg" alt="img">
+            <img :src="require(`@/assets/images/${images[1]}`)" alt="img">
         </div>
 
         <div class="col-3">
-            <img src="@/assets/images/post_feat_img_23-320x202.jpg" alt="img">
+            <img :src="require(`@/assets/images/${images[2]}`)" alt="img">
         </div>
 
     </div>
@@ -20,7 +20,30 @@
 
 <script>
 export default {
-    name: 'ThreeNewsComponent'
+    name: 'ThreeNewsComponent',
+    data() {
+        return {
+            imgName: 'post_feat_img_',
+            imgDimension: '320x202',
+            images: []
+        }
+    },
+    props: {
+        imgNums: Array
+    },
+    created() {
+        this.imgUrlMaker()
+    },
+    methods: {
+        imgUrlMaker() {
+
+            for (let i = 0; i < 3; i++) {
+                const imgUrl = `${this.imgName}${this.imgNums[i]}-${this.imgDimension}.jpg`;
+                this.images.push(imgUrl)
+            }
+
+        }
+    }
 }
 </script>
 
