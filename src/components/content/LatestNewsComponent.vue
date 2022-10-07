@@ -133,7 +133,7 @@ export default {
             .col {
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: flex-end;
 
                 padding: 100px;
                 margin-right: 10px;
