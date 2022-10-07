@@ -4,7 +4,7 @@
         <div class="container">
 
             <!-- Contenitore titolo, sottotitolo e separatore -->
-            <div class="title-container d-flex flex-column">
+            <div class="title-container d-flex flex-column pb-5">
 
                 <div class="title text-center">
                     <h3 class="text-uppercase">Phasellus Eget Metus</h3>
@@ -15,22 +15,7 @@
 
             </div>
 
-            <!-- First 3 in 1 -->
-            <div class="three-in-one pt-5">
-
-                <div class="col-3">
-                    <img src="@/assets/images/post_feat_img_25-320x202.jpg" alt="img">
-                </div>
-
-                <div class="col-3">
-                    <img src="@/assets/images/post_feat_img_24-320x202.jpg" alt="img">
-                </div>
-
-                <div class="col-3">
-                    <img src="@/assets/images/post_feat_img_23-320x202.jpg" alt="img">
-                </div>
-
-            </div>
+            <ThreeNewsComponent />
 
             <!-- One big element -->
             <div class="one-in-one my-5">
@@ -54,7 +39,9 @@
                 </div>
             </div>
 
-            <!-- Second 3 in 1 -->
+
+            <ThreeNewsComponent />
+            <!-- Second 3 in 1
             <div class="three-in-one">
 
                 <div class="col-3">
@@ -69,7 +56,7 @@
                     <img src="@/assets/images/post_feat_img_20-320x202.jpg" alt="img">
                 </div>
 
-            </div>
+            </div> -->
 
             <!-- One 2/3 and 1/3 -->
             <div class="two-and-one gap-5 pt-5">
@@ -94,8 +81,10 @@
 </template>
 
 <script>
+import ThreeNewsComponent from "../contentUtils/ThreeNewsComponent.vue";
 export default {
-    name: 'LatestNewsComponent'
+    name: "LatestNewsComponent",
+    components: { ThreeNewsComponent }
 }
 </script>
 
@@ -132,13 +121,6 @@ export default {
                 }
 
             }
-        }
-
-        // Contenitore di tre elementi
-        .three-in-one {
-            display: flex;
-            justify-content: space-between;
-
         }
 
         // Contenitore elemento unico
