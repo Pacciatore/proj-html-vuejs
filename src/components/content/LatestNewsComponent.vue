@@ -44,7 +44,7 @@
             <ThreeNewsComponent class="pt-2" :articles="latestNews.slice(3,6)" />
 
             <!-- One 2/3 and 1/3 -->
-            <ReviewAndTutorialComponent />
+            <ReviewAndTutorialComponent :tutorials="tutorials" />
 
         </div>
 
