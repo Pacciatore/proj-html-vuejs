@@ -11,13 +11,14 @@
 
             <div class="title-container">
                 <h2>Tutorial & Guides</h2>
-                <div class="orange-separator one-third"></div>
+                <div class="orange-separator one-third my-4"></div>
             </div>
 
-            <div class="articles-container col">
+            <div class="articles-container col py-2">
 
-                <div v-for="tutorial in tutorials" :key="tutorial.title">
+                <div class="article" v-for="tutorial in tutorials" :key="tutorial.title">
 
+                    <img src="@/assets/images/post_feat_img_23-147x118.jpg" alt="img">
                     <div class="title">{{ tutorial.title }}</div>
 
                 </div>
@@ -83,6 +84,11 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            .article {
+                display: flex;
+            }
+
         }
 
     }
