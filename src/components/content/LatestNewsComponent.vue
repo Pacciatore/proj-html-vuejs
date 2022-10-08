@@ -169,12 +169,11 @@ export default {
                 justify-content: flex-end;
 
                 padding: 100px;
-                margin-right: 10px;
+                padding-top: 300px;
 
-                height: 670px;
 
                 background-image: url(@/assets/images/featured_article_1_bg.jpg);
-                background-size: contain;
+                background-size: cover;
 
                 h3 {
                     color: inherit;
