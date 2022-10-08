@@ -2,8 +2,8 @@
 
     <div class="three-in-one">
 
-        <div v-for="(image, index) in images" :key="index" class="col-3">
-            <img :src="require(`@/assets/images/${image}`)" alt="img">
+        <div v-for="(article) in articles" :key="article.imgName" class="col-3">
+            <img :src="require(`@/assets/images/${article.imgName}`)" alt="img">
         </div>
 
     </div>
@@ -13,29 +13,10 @@
 <script>
 export default {
     name: 'ThreeNewsComponent',
-    data() {
-        return {
-            imgName: 'post_feat_img_',
-            imgDimension: '320x202',
-            images: []
-        }
-    },
     props: {
-        imgNums: Array
-    },
-    created() {
-        this.imgUrlMaker()
-    },
-    methods: {
-        imgUrlMaker() {
-
-            for (let i = 0; i < 3; i++) {
-                const imgUrl = `${this.imgName}${this.imgNums[i]}-${this.imgDimension}.jpg`;
-                this.images.push(imgUrl)
-            }
-
-        }
+        articles: Array
     }
+
 }
 </script>
 

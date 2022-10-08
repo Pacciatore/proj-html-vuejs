@@ -16,7 +16,7 @@
             </div>
 
             <!-- First 3 in 1 -->
-            <ThreeNewsComponent :imgNums="[img1, img2, img3]" />
+            <ThreeNewsComponent :articles="latestNews.slice(0,3)" />
 
             <!-- One big element -->
             <div class="one-in-one my-5">
@@ -41,7 +41,7 @@
             </div>
 
             <!-- Second 3 in 1 -->
-            <ThreeNewsComponent :imgNums="[img4, img5, img6]" />
+            <ThreeNewsComponent :articles="latestNews.slice(3,6)" />
 
             <!-- One 2/3 and 1/3 -->
             <div class="two-and-one gap-5 pt-5">
@@ -72,12 +72,46 @@ export default {
     components: { ThreeNewsComponent },
     data() {
         return {
-            img1: '25',
-            img2: '24',
-            img3: '23',
-            img4: '22',
-            img5: '21',
-            img6: '20',
+            // img1: '25',
+            // img2: '24',
+            // img3: '23',
+            // img4: '22',
+            // img5: '21',
+            // img6: '20',
+
+            latestNews: [
+                {
+                    imgName: `post_feat_img_25-320x202.jpg`,
+                    articleDate: '',
+                    articleComments: ''
+                },
+                {
+                    imgName: `post_feat_img_24-320x202.jpg`,
+                    articleDate: '',
+                    articleComments: ''
+                },
+                {
+                    imgName: `post_feat_img_23-320x202.jpg`,
+                    articleDate: '',
+                    articleComments: ''
+                },
+                {
+                    imgName: `post_feat_img_22-320x202.jpg`,
+                    articleDate: '',
+                    articleComments: ''
+                },
+                {
+                    imgName: `post_feat_img_21-320x202.jpg`,
+                    articleDate: '',
+                    articleComments: ''
+                },
+                {
+                    imgName: `post_feat_img_20-320x202.jpg`,
+                    articleDate: '',
+                    articleComments: ''
+                }
+            ]
+
         }
     }
 }
