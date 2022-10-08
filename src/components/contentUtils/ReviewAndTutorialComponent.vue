@@ -1,15 +1,29 @@
 <template>
-    <div class="two-and-one gap-5 pt-5">
+    <div class="two-and-one pt-5">
 
-        <div class="col-6">
+        <!-- Reviewed article -->
+        <div class="col-8">
             <img class="img-fluid" src="@/assets/images/featured_article_2_bg.jpg" alt="featured_2">
         </div>
 
-        <div class="col-3">
+        <!-- Tutorials & Guides -->
+        <div class="col-4 tutorial-guides">
+
             <div class="title-container">
                 <h2>Tutorial & Guides</h2>
                 <div class="orange-separator one-third"></div>
             </div>
+
+            <div class="articles-container col">
+
+                <div v-for="tutorial in tutorials" :key="tutorial.title">
+
+                    <div class="title">{{ tutorial.title }}</div>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -17,7 +31,10 @@
 
 <script>
 export default {
-    name: 'ReviewAndTutorialComponent'
+    name: 'ReviewAndTutorialComponent',
+    props: {
+        tutorials: Array
+    }
 }
 </script>
 
@@ -26,34 +43,48 @@ export default {
 
 .two-and-one {
     display: flex;
+    justify-content: space-between;
+    gap: $tr-gap-30;
 
-    .title-container {
+    .tutorial-guides {
 
-        // h3 and h2 classes
-        h3 {
-            color: $tr-cape-cod;
-            font-size: $tr-fs-07;
-            letter-spacing: $tr-title-ls;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
+        display: flex;
+        flex-direction: column;
 
-        h2 {
-            font-weight: 700;
-        }
+        .title-container {
 
-        .orange-separator {
-            height: 2px;
-            width: 5%;
-            background-color: $tr-brand-salmon;
-
-            // Classe speciale per l'orange separator nell'1/3
-            &.one-third {
-                width: 30%;
+            // h3 and h2 classes
+            h3 {
+                color: $tr-cape-cod;
+                font-size: $tr-fs-07;
+                letter-spacing: $tr-title-ls;
+                margin-bottom: 1rem;
+                font-weight: 700;
             }
 
-        }
-    }
+            h2 {
+                font-weight: 700;
+            }
 
+            .orange-separator {
+                height: 2px;
+                width: 5%;
+                background-color: $tr-brand-salmon;
+
+                // Classe speciale per l'orange separator nell'1/3
+                &.one-third {
+                    width: 30%;
+                }
+
+            }
+        }
+
+        .articles-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
 }
 </style>
