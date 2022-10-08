@@ -5,6 +5,10 @@
         <div v-for="(article) in articles" :key="article.imgName" class="col-3">
 
             <img :src="require(`@/assets/images/${article.imgName}`)" alt="img">
+
+            <div class="title">{{article.title}}</div>
+
+            <div class="articleInfo d-flex">
             <div class="date">{{article.articleDate}}</div>
             <div class="comments">Comments {{article.articleComments}}</div>
             <div class="incipit-text">{{article.incipitText}}</div>
