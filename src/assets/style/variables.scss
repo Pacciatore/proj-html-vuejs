@@ -1,3 +1,4 @@
+//#region Palette 
 // Azzurri
 $tr-brand-color: #27aabe;
 $tr-brand-color-hover: #399bc0;
@@ -10,13 +11,18 @@ $tr-cape-cod: #3b3d3f;
 
 // Special
 $tr-brand-salmon: #fc8c5e;
+//#endregion Palette 
 
-
+//#region Element properties 
 // Padding
 $tr-py-100: 100px 0;
 $tr-jumbo-padding: 310px;
+
+// Flex
+$tr-gap-10: 10px;
 
 // Font
 $tr-fs-07: .7rem;
 // Letter Spacing
 $tr-title-ls: 5px;
+//#endregion Element properties 
