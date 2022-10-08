@@ -44,21 +44,7 @@
             <ThreeNewsComponent class="pt-2" :articles="latestNews.slice(3,6)" />
 
             <!-- One 2/3 and 1/3 -->
-            <div class="two-and-one gap-5 pt-5">
-
-                <div class="col-6">
-                    <img class="img-fluid" src="@/assets/images/featured_article_2_bg.jpg" alt="featured_2">
-                </div>
-
-                <div class="col-3">
-                    <div class="title-container">
-                        <h2>Tutorial & Guides</h2>
-                        <div class="orange-separator one-third"></div>
-                    </div>
-                </div>
-
-            </div>
-
+            <ReviewAndTutorialComponent />
 
         </div>
 
@@ -67,9 +53,10 @@
 
 <script>
 import ThreeNewsComponent from "../contentUtils/ThreeNewsComponent.vue";
+import ReviewAndTutorialComponent from "../contentUtils/ReviewAndTutorialComponent.vue";
 export default {
     name: "LatestNewsComponent",
-    components: { ThreeNewsComponent },
+    components: { ThreeNewsComponent, ReviewAndTutorialComponent },
     data() {
         return {
             latestNews: [
@@ -114,6 +101,23 @@ export default {
                     articleDate: 'October 11th, 2015',
                     articleComments: 'Off',
                     incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
+                }
+            ],
+            tutorials: [
+                {
+                    title: 'Donec ornare pretium eget scelisque justo',
+                    date: 'October 11th, 2015',
+                    comments: 'Off'
+                },
+                {
+                    title: 'Fusce sollicitudin nunc sed placerat varius',
+                    date: 'October 11th, 2015',
+                    comments: 'Off'
+                },
+                {
+                    title: 'Proin eu purus sed aru aliquet curabir vens',
+                    date: 'October 11th, 2015',
+                    comments: 'Off'
                 }
             ]
 
@@ -190,11 +194,6 @@ export default {
                 }
 
             }
-        }
-
-        // Contenitore un 2/3 ed un 1/3
-        .two-and-one {
-            display: flex;
         }
 
     }
