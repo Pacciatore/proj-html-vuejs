@@ -6,9 +6,10 @@
 
             <img :src="require(`@/assets/images/${article.imgName}`)" alt="img">
 
-            <div class="title text-black fw-bold">{{article.title}}</div>
+            <h5 class="title text-black fw-bold pt-3">{{article.title}}</h5>
 
-            <div class="articleInfo d-flex">
+            <!-- Info: Data e Commenti -->
+            <div class="articleInfo d-flex pt-1">
 
                 <div class="date">{{article.articleDate}}</div>
                 <div class="comments" :class="{ off : article.articleComments === 'Off'}">
@@ -17,7 +18,8 @@
                 </div>
 
             </div>
-            <div class="incipit-text">{{article.incipitText}}</div>
+
+            <div class="incipit-text py-2">{{article.incipitText}}</div>
 
         </div>
 
@@ -50,7 +52,10 @@ export default {
         width: 100%;
     }
 
+    // Info: Data e Commenti
     .articleInfo {
+
+        font-size: .85rem;
 
         .date {
 
@@ -86,6 +91,10 @@ export default {
             }
         }
 
+    }
+
+    .incipit-text {
+        line-height: 1.75rem;
     }
 
 }

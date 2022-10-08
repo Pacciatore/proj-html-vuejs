@@ -41,7 +41,7 @@
             </div>
 
             <!-- Second 3 in 1 -->
-            <ThreeNewsComponent :articles="latestNews.slice(3,6)" />
+            <ThreeNewsComponent class="pt-2" :articles="latestNews.slice(3,6)" />
 
             <!-- One 2/3 and 1/3 -->
             <div class="two-and-one gap-5 pt-5">
