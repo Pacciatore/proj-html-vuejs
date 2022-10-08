@@ -2,16 +2,8 @@
 
     <div class="three-in-one">
 
-        <div class="col-3">
-            <img :src="require(`@/assets/images/${images[0]}`)" alt="img">
-        </div>
-
-        <div class="col-3">
-            <img :src="require(`@/assets/images/${images[1]}`)" alt="img">
-        </div>
-
-        <div class="col-3">
-            <img :src="require(`@/assets/images/${images[2]}`)" alt="img">
+        <div v-for="(image, index) in images" :key="index" class="col-3">
+            <img :src="require(`@/assets/images/${image}`)" alt="img">
         </div>
 
     </div>
