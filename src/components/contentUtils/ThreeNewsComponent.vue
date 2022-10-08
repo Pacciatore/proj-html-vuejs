@@ -2,7 +2,7 @@
 
     <div class="three-in-one">
 
-        <div v-for="(article) in articles" :key="article.imgName" class="col-4">
+        <div v-for="(article) in articles" :key="article.imgName" class="col">
 
             <img :src="require(`@/assets/images/${article.imgName}`)" alt="img">
 
@@ -39,10 +39,10 @@ export default {
 .three-in-one {
     display: flex;
     justify-content: space-between;
-    gap: $tr-gap-10;
+    gap: $tr-gap-30;
 
     img {
-        width: calc(100% - ($tr-gap-10 * 2));
+        width: 100%;
     }
 
     .articleInfo {
