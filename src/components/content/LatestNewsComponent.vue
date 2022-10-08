@@ -72,43 +72,42 @@ export default {
     components: { ThreeNewsComponent },
     data() {
         return {
-            // img1: '25',
-            // img2: '24',
-            // img3: '23',
-            // img4: '22',
-            // img5: '21',
-            // img6: '20',
-
             latestNews: [
                 {
                     imgName: `post_feat_img_25-320x202.jpg`,
-                    articleDate: '',
-                    articleComments: ''
+                    articleDate: 'October 11th, 2015',
+                    articleComments: '2',
+                    incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
                 },
                 {
                     imgName: `post_feat_img_24-320x202.jpg`,
-                    articleDate: '',
-                    articleComments: ''
+                    articleDate: 'October 11th, 2015',
+                    articleComments: 'Off',
+                    incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
                 },
                 {
                     imgName: `post_feat_img_23-320x202.jpg`,
-                    articleDate: '',
-                    articleComments: ''
+                    articleDate: 'October 11th, 2015',
+                    articleComments: 'Off',
+                    incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
                 },
                 {
                     imgName: `post_feat_img_22-320x202.jpg`,
-                    articleDate: '',
-                    articleComments: ''
+                    articleDate: 'October 11th, 2015',
+                    articleComments: 'Off',
+                    incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
                 },
                 {
                     imgName: `post_feat_img_21-320x202.jpg`,
-                    articleDate: '',
-                    articleComments: ''
+                    articleDate: 'October 11th, 2015',
+                    articleComments: 'Off',
+                    incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
                 },
                 {
                     imgName: `post_feat_img_20-320x202.jpg`,
-                    articleDate: '',
-                    articleComments: ''
+                    articleDate: 'October 11th, 2015',
+                    articleComments: 'Off',
+                    incipitText: `Donnec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fingilla, vestibulum placerat metus mattis. Aenean dictum viate nisl`
                 }
             ]
 
