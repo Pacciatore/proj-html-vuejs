@@ -33,4 +33,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.btn-dark {
+  background-color: #000000;
+}
 </style>
