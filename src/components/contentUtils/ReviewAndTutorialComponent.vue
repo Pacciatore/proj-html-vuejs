@@ -18,8 +18,25 @@
 
                 <div class="article" v-for="tutorial in tutorials" :key="tutorial.title">
 
-                    <img src="@/assets/images/post_feat_img_23-147x118.jpg" alt="img">
-                    <div class="title">{{ tutorial.title }}</div>
+                    <div class="img-container col-4">
+                        <img src="@/assets/images/post_feat_img_23-147x118.jpg" alt="img">
+                    </div>
+
+                    <div class="articleInfo col d-flex flex-column pt-1 ps-5">
+
+                        <div class="title text-black fw-bold fs-5">{{ tutorial.title }}</div>
+
+                        <!-- Data e Commenti -->
+                        <div class="col d-flex pt-1">
+                            <div class="date">{{tutorial.date}}</div>
+                            <div class="comments" :class="{ off : tutorial.comments === 'Off'}">
+                                <span>Comments</span>
+                                <span>{{tutorial.comments}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+
 
                 </div>
 
@@ -44,13 +61,14 @@ export default {
 
 .two-and-one {
     display: flex;
-    justify-content: space-between;
-    gap: $tr-gap-30;
 
+    // 1/3 element
     .tutorial-guides {
 
         display: flex;
         flex-direction: column;
+
+        padding-left: $tr-gap-30;
 
         .title-container {
 
@@ -80,6 +98,7 @@ export default {
             }
         }
 
+        // Contenitore tutorial e guide thumbs
         .articles-container {
             display: flex;
             flex-direction: column;
@@ -87,6 +106,51 @@ export default {
 
             .article {
                 display: flex;
+                // flex-direction: column;
+                flex-wrap: wrap;
+
+                // Info: Titolo, Data e Commenti
+                .articleInfo {
+
+                    font-size: .85rem;
+
+                    .date {
+
+                        // Barra divisoria tra data e commenti
+                        &::after {
+                            content: '|';
+                            padding: 0 5px;
+                        }
+
+                    }
+
+                    .comments {
+                        color: black;
+                        display: flex;
+                        flex-direction: row-reverse;
+
+                        font-weight: 600;
+
+                        :nth-child(2) {
+                            padding-right: 5px;
+                        }
+
+                        &.off {
+                            color: inherit;
+                            flex-direction: row;
+
+                            font-weight: inherit;
+
+                            :nth-child(1) {
+                                padding-right: 5px;
+                            }
+
+                        }
+                    }
+
+                }
+
+
             }
 
         }
