@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/style/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap');
 
 #app {
@@ -35,6 +36,12 @@ export default {
 }
 
 .btn-dark {
-  background-color: #000000;
+  background-color: $tr-shark;
+
+  &:hover {
+    background-color: $tr-shark-muted;
+    border-color: $tr-shark-muted;
+  }
+
 }
 </style>
