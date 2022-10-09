@@ -13,14 +13,23 @@
 
         </div>
 
+        <div class="forum-cards container d-flex flex-wrap justify-content-between">
+
+            <div class="col-3 p-3">
+                <ForumCardComponent />
+            </div>
+
+        </div>
 
 
     </div>
 </template>
 
 <script>
+import ForumCardComponent from '../contentUtils/ForumCardComponent.vue';
 export default {
-    name: 'ForumSectionsComponent'
+    name: "ForumSectionsComponent",
+    components: { ForumCardComponent }
 }
 </script>
 
