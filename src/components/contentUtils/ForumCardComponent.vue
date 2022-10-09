@@ -1,14 +1,19 @@
 <template>
-    <div class="card">
+    <div class="card p-4">
 
-        <a href="#">News & Community</a>
+        <font-awesome-icon :icon="forumInfo.icon" />
+
+        <a href="#">{{ forumInfo.name }}</a>
 
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ForumCardComponent'
+    name: 'ForumCardComponent',
+    props: {
+        forumInfo: Object
+    }
 }
 </script>
 
