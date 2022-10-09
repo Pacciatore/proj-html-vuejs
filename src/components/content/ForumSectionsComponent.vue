@@ -1,5 +1,5 @@
 <template>
-    <div id="forum-sections" class="py-5">
+    <div id="forum-sections">
 
         <!-- Contenitore titolo, sottotitolo e separatore -->
         <div class="title-container d-flex flex-column pb-5">
@@ -76,6 +76,7 @@ export default {
 
 #forum-sections {
     background-color: $tr-custom-grey;
+    padding: $tr-py-100;
 
     .title-container {
 
