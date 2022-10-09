@@ -6,6 +6,9 @@
     <LatestNewsComponent />
     <BlackBannerComponent :text="'Read our blog'" />
 
+    <BlackBannerComponent :text="'Go to our forum'" />
+
+
   </main>
 </template>
 
