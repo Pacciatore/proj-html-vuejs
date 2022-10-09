@@ -1,9 +1,26 @@
 <template>
     <div class="two-and-one pt-5">
 
-        <!-- Reviewed article -->
-        <div class="col-8">
-            <img class="img-fluid" src="@/assets/images/featured_article_2_bg.jpg" alt="featured_2">
+        <!-- Reviewed article: sostanzialmente one-in-one ma più piccolo -->
+        <div class="col-8 reviewed-article">
+            <div class="content">
+
+                <div class="title-container">
+                    <h3>Reviewed Product</h3>
+                    <h2>Mauris viverra atisn ipsum eget felis prims efficitur varius</h2>
+                </div>
+
+                <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus
+                    venenatis, sed blandit dui, dolor at bibendum.
+                </p>
+
+                <div class="btn-container">
+                    <button class="btn btn-dark rounded-0 text-uppercase px-5 py-3 fs-4 fw-semibold">Read More
+                        <font-awesome-icon class="ps-2" icon="fa-solid fa-angle-right" />
+                    </button>
+                </div>
+
+            </div>
         </div>
 
         <!-- Tutorials & Guides -->
@@ -62,6 +79,74 @@ export default {
 .two-and-one {
     display: flex;
 
+    .title-container {
+
+        // h3 and h2 classes
+        h3 {
+            color: $tr-cape-cod;
+            font-size: $tr-fs-07;
+            letter-spacing: $tr-title-ls;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-weight: 700;
+        }
+
+        .orange-separator {
+            height: 2px;
+            width: 5%;
+            background-color: $tr-brand-salmon;
+
+            // Classe speciale per l'orange separator nell'1/3
+            &.one-third {
+                width: 30%;
+            }
+
+        }
+    }
+
+    // 2/3 element
+    // TODO: è sostanzialmente il one-in-one di LatestNews
+    .reviewed-article {
+
+        padding-right: calc($tr-gap-30 / 2);
+
+        color: white;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 100px;
+            padding-top: 150px;
+
+            background-image: url(@/assets/images/featured_article_2_bg.jpg);
+            background-size: cover;
+
+            line-height: 2rem;
+
+            h3 {
+                color: inherit;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                padding-bottom: 5px;
+            }
+
+            h2 {
+                font-size: 2.75rem;
+            }
+
+            p {
+                padding: 20px 0;
+            }
+
+        }
+
+    }
+
     // 1/3 element
     .tutorial-guides {
 
@@ -69,34 +154,6 @@ export default {
         flex-direction: column;
 
         padding-left: $tr-gap-30;
-
-        .title-container {
-
-            // h3 and h2 classes
-            h3 {
-                color: $tr-cape-cod;
-                font-size: $tr-fs-07;
-                letter-spacing: $tr-title-ls;
-                margin-bottom: 1rem;
-                font-weight: 700;
-            }
-
-            h2 {
-                font-weight: 700;
-            }
-
-            .orange-separator {
-                height: 2px;
-                width: 5%;
-                background-color: $tr-brand-salmon;
-
-                // Classe speciale per l'orange separator nell'1/3
-                &.one-third {
-                    width: 30%;
-                }
-
-            }
-        }
 
         // Contenitore tutorial e guide thumbs
         .articles-container {
@@ -156,5 +213,6 @@ export default {
         }
 
     }
+
 }
 </style>
