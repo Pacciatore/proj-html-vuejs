@@ -15,8 +15,8 @@
 
         <div class="forum-cards container d-flex flex-wrap justify-content-between">
 
-            <div class="col-3 p-3">
-                <ForumCardComponent />
+            <div v-for="forumInfo in forumInfos" :key="forumInfo.name" class="col-3 p-3">
+                <ForumCardComponent :forumInfo="forumInfo" />
             </div>
 
         </div>
@@ -29,6 +29,44 @@
 import ForumCardComponent from '../contentUtils/ForumCardComponent.vue';
 export default {
     name: "ForumSectionsComponent",
+    data() {
+        return {
+            forumInfos: [
+                {
+                    icon: 'fas fa-file-lines',
+                    name: 'News & Community'
+                },
+                {
+                    icon: 'fa-brands fa-apple',
+                    name: 'Apple Forum'
+                },
+                {
+                    icon: 'fa-brands fa-windows',
+                    name: 'Microsoft Forum'
+                },
+                {
+                    icon: 'fa-brands fa-android',
+                    name: 'Android Forum'
+                },
+                {
+                    icon: 'fas fa-mug-saucer',
+                    name: 'General Discussion'
+                },
+                {
+                    icon: 'fas fa-cubes',
+                    name: 'Apps & Software'
+                },
+                {
+                    icon: 'fas fa-laptop',
+                    name: 'Gadgets & Stuff'
+                },
+                {
+                    icon: 'fas fa-wrench',
+                    name: 'Tutorials & Guides'
+                }
+            ]
+        }
+    },
     components: { ForumCardComponent }
 }
 </script>
