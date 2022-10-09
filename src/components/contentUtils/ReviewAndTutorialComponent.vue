@@ -19,7 +19,7 @@
                 <div class="article" v-for="tutorial in tutorials" :key="tutorial.title">
 
                     <div class="img-container col-4">
-                        <img src="@/assets/images/post_feat_img_23-147x118.jpg" alt="img">
+                        <img :src="require(`@/assets/images/${tutorial.imgName}`)" alt="img">
                     </div>
 
                     <div class="articleInfo col d-flex flex-column pt-1 ps-5">

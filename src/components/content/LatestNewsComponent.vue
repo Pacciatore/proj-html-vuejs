@@ -107,17 +107,20 @@ export default {
                 {
                     title: 'Donec ornare pretium eget scelisque justo',
                     date: 'October 11th, 2015',
-                    comments: 'Off'
+                    comments: 'Off',
+                    imgName: 'post_feat_img_23-147x118.jpg'
                 },
                 {
                     title: 'Fusce sollicitudin nunc sed placerat varius',
                     date: 'October 11th, 2015',
-                    comments: 'Off'
+                    comments: 'Off',
+                    imgName: 'post_feat_img_22-147x118.jpg'
                 },
                 {
                     title: 'Proin eu purus sed aru aliquet curabir vens',
                     date: 'October 11th, 2015',
-                    comments: 'Off'
+                    comments: 'Off',
+                    imgName: 'post_feat_img_20-147x118.jpg'
                 }
             ]
 
