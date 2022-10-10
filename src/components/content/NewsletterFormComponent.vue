@@ -6,10 +6,11 @@
 
             <form class="w-75 text-center">
 
-                <input type="email" name="userEmail" id="userEmail" placeholder="Insert your email*" class="w-50">
+                <input type="email" name="userEmail" id="userEmail" placeholder="Insert your email*"
+                    class="w-50 p-2 h-100 me-5">
 
                 <!-- Uso di bottone invece input:submit per mancanza di action in form -->
-                <button class="btn btn-dark text-uppercase rounded-0">Send</button>
+                <button class="btn btn-dark text-uppercase rounded-0 fw-bold w-25 h-100">Send</button>
                 <!-- <input type="submit" class="btn btn-dark text-uppercase rounded-0" value="Send"> -->
 
             </form>
@@ -32,6 +33,16 @@ export default {
 
     .container {
         padding: $tr-py-100;
+
+        form {
+            height: 50px;
+
+            #userEmail {
+                border: 1px solid $tr-silver-chalice;
+            }
+
+        }
+
     }
 
 }
