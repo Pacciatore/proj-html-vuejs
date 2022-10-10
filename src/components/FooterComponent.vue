@@ -1,12 +1,16 @@
 <template>
     <footer>
 
+        <TopFooterComponent />
+
     </footer>
 </template>
 
 <script>
+import TopFooterComponent from './content/TopFooterComponent.vue';
 export default {
-    name: 'FooterComponent'
+    name: "FooterComponent",
+    components: { TopFooterComponent }
 }
 </script>
 
