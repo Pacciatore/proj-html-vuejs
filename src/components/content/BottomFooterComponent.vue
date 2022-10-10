@@ -87,9 +87,10 @@ div.py-5 {
 
             padding: 10px;
 
+            line-height: 0;
+
             * {
                 color: inherit;
-                // Perché prendono la forma di m&m's?
                 height: 1.5rem;
                 width: 1.5rem;
             }
