@@ -3,12 +3,21 @@
 
         <h5>{{ element.title }}</h5>
 
-        <div v-for="(question, index) in element.questions" :key="index"
-            :class="element.questions.length === 1 ? 'info' : 'question' ">
-            <div class="icon-container">
-                <font-awesome-icon v-if="element.questions.length > 1" icon="fa-solid fa-angle-right" />
-            </div>
-            <p>{{ question }}</p>
+        <div v-for="(question, index) in element.questions" :key="index">
+
+            <!-- Display site info -->
+            <p v-if="element.questions.length === 1" class="info">{{ question }}</p>
+
+            <!-- Display topics -->
+            <a v-else href="#" class="question">
+
+                <div class="icon-container">
+                    <font-awesome-icon v-if="element.questions.length > 1" icon="fa-solid fa-angle-right" />
+                </div>
+                <p>{{ question }}</p>
+
+            </a>
+
         </div>
 
     </div>
@@ -43,6 +52,9 @@ export default {
     .question {
         padding: 10px 0;
         border-bottom: 1px solid $tr-custom-grey;
+
+        color: inherit;
+        text-decoration: none;
 
         display: flex;
 
