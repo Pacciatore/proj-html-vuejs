@@ -91,8 +91,8 @@ div.py-5 {
 
             * {
                 color: inherit;
-                height: 1.5rem;
-                width: 1.5rem;
+                font-size: 1.5rem;
+                aspect-ratio: 1/1;
             }
 
             &.fb {
