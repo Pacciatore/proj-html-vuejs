@@ -44,6 +44,9 @@ div.py-5 {
         color: $tr-silver-chalice;
         font-weight: 600;
 
+        display: flex;
+        align-items: center;
+
         // Barra divisoria elementi interni
         :not(:first-child):before {
             content: '|';
