@@ -13,12 +13,31 @@
             </div>
 
             <!-- Colonna per i link social -->
-            <div class="social-links col-3 d-flex justify-content-end">
+            <div class="social-links col-2 d-flex justify-content-between">
 
-                <font-awesome-icon icon="fa-brands fa-facebook-f" />
-                <font-awesome-icon icon="fa-brands fa-twitter" />
-                <font-awesome-icon icon="fa-brands fa-instagram" />
-                <font-awesome-icon icon="fa-brands fa-youtube" />
+                <div class="icon-container rounded-circle fb">
+                    <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-facebook-f" />
+                    </a>
+                </div>
+
+                <div class="icon-container rounded-circle tw">
+                    <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-twitter" />
+                    </a>
+                </div>
+
+                <div class="icon-container rounded-circle insta">
+                    <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-instagram" />
+                    </a>
+                </div>
+
+                <div class="icon-container rounded-circle yt">
+                    <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-youtube" />
+                    </a>
+                </div>
 
             </div>
 
@@ -57,6 +76,39 @@ div.py-5 {
         a {
             color: $tr-shark;
             text-decoration: none;
+        }
+
+    }
+
+    .social-links {
+        color: white;
+
+        .icon-container {
+
+            padding: 10px;
+
+            * {
+                color: inherit;
+                // Perché prendono la forma di m&m's?
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+
+            &.fb {
+                background-color: $tr-facebook-blue;
+            }
+
+            &.tw {
+                background-color: $tr-twitter-blue;
+            }
+
+            &.insta {
+                background-color: $tr-instagram-indaco;
+            }
+
+            &.yt {
+                background-color: $tr-youtube-red;
+            }
         }
 
     }
