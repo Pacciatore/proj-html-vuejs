@@ -3,12 +3,12 @@
         <div class="container d-flex justify-content-between">
 
             <!-- Colonna delle note legali -->
-            <div class="legal-notes col-6 d-flex">
+            <div class="legal-notes col-6">
 
-                <div class="col">Copyright</div>
-                <div class="col">Avada</div>
-                <div class="col">All Rights</div>
-                <div class="col">Powered by</div>
+                <span>&copy; Copyright 2012 - 2020</span>
+                <span>Avada Theme by <a href="#">Theme Fusion</a></span>
+                <span>All Rights Reserved</span>
+                <span>Powered by <a href="#">WordPress</a></span>
 
             </div>
 
@@ -37,5 +37,26 @@ export default {
 
 div.py-5 {
     border-top: 1px solid $tr-custom-grey;
+
+    font-size: .85rem;
+
+    .legal-notes {
+        color: $tr-silver-chalice;
+        font-weight: 600;
+
+        // Barra divisoria elementi interni
+        :not(:first-child):before {
+            content: '|';
+            font-weight: 500;
+            padding: 0 5px;
+        }
+
+        a {
+            color: $tr-shark;
+            text-decoration: none;
+        }
+
+    }
+
 }
 </style>
