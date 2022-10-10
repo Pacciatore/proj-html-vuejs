@@ -5,6 +5,10 @@
     <MainComponent />
     <FooterComponent />
 
+    <a href="#" class="back-to-top px-2">
+      <font-awesome-icon icon="fa-solid fa-angle-up" />
+    </a>
+
   </div>
 </template>
 
@@ -33,6 +37,23 @@ export default {
   font-family: 'Fira Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+
+  color: white;
+  text-decoration: none;
+  background-color: $tr-cape-cod;
+
+  border-radius: 5px 5px 0 0;
+
+  &:hover {
+    color: white;
+  }
+
 }
 
 .btn-dark {
