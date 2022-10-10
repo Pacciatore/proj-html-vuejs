@@ -2,15 +2,17 @@
     <footer>
 
         <TopFooterComponent />
+        <BottomFooterComponent />
 
     </footer>
 </template>
 
 <script>
 import TopFooterComponent from './content/TopFooterComponent.vue';
+import BottomFooterComponent from './content/BottomFooterComponent.vue';
 export default {
     name: "FooterComponent",
-    components: { TopFooterComponent }
+    components: { TopFooterComponent, BottomFooterComponent }
 }
 </script>
 
