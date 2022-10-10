@@ -5,7 +5,10 @@
 
         <div v-for="(question, index) in element.questions" :key="index"
             :class="element.questions.length === 1 ? 'info' : 'question' ">
-            {{ question }}
+            <div class="icon-container">
+                <font-awesome-icon v-if="element.questions.length > 1" icon="fa-solid fa-angle-right" />
+            </div>
+            <p>{{ question }}</p>
         </div>
 
     </div>
@@ -23,13 +26,30 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/style/variables.scss';
 
-h5 {
-    font-weight: 700;
-    text-transform: uppercase;
-}
+.px-2 {
 
-.info {
-    color: $tr-silver-chalice;
-    font-weight: 600;
+    h5 {
+        font-weight: 700;
+        text-transform: uppercase;
+
+        padding-bottom: 20px;
+    }
+
+    .info {
+        color: $tr-silver-chalice;
+        font-weight: 600;
+    }
+
+    .question {
+        padding: 10px 0;
+        border-bottom: 1px solid $tr-custom-grey;
+
+        display: flex;
+
+        .icon-container {
+            padding-right: 10px;
+        }
+
+    }
 }
 </style>
