@@ -3,8 +3,9 @@
 
         <h6>{{ element.title }}</h6>
 
-        <!-- v-if -->
-        <p>Sedembfisdbvhjdskb</p>
+        <div v-for="(question, index) in element.questions" :key="index">
+            {{ question }}
+        </div>
 
     </div>
 </template>
